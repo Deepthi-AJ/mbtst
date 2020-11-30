@@ -70,8 +70,8 @@ function draw() {
     }
 
     //create a infinity ground
-    if(ground.x<200){
-      ground.x = 400;
+    if(ground.x<width/4){
+      ground.x = width/2;
     }
 
     //move the player
