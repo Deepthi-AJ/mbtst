@@ -37,7 +37,7 @@ function setup() {
   ground.addImage(groundImage);
   ground.scale=0.3;
   
-  ground.x=width/2;
+  ground.x=ground.width/2;
 
   invisibleGround=createSprite(width/2,height-20,width,20);
   invisibleGround.visible=false;
@@ -70,8 +70,8 @@ function draw() {
     }
 
     //create a infinity ground
-    if(ground.x<width/4){
-      ground.x = width/2;
+    if(ground.x<ground.width/4){
+      ground.x = ground.width/2;
     }
 
     //move the player
