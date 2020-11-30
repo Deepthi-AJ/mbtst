@@ -28,21 +28,21 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(800,400);
+  createCanvas(windowWidth,windowHeight); //800,400
 
-  backGround=createSprite(400,200,800,400);
+  backGround=createSprite(width/2,height/2,width,height);
   backGround.addImage(backgroundImage);
 
-  ground=createSprite(400,450,800,100);
+  ground=createSprite(width/2,height+50,width,100);
   ground.addImage(groundImage);
   ground.scale=0.3;
   
   ground.x=400;
 
-  invisibleGround=createSprite(400,380,800,20);
+  invisibleGround=createSprite(width/2,height-20,width,20);
   invisibleGround.visible=false;
 
-  player=createSprite(400, 300, 50, 50);
+  player=createSprite(width/2, height-100, 50, 50);
   player.addAnimation("running",player_running);
   player.addAnimation("standing",player_standing);
   player.x=100;
@@ -97,10 +97,10 @@ function draw() {
     
     textSize(50);
     fill(255)
-    text("Game Over",300,200);
+    text("Game Over",width/2-100,height/2);
     textSize(30);
-    text("Well Played",350,250)
-    text("Press R to restart",300,275)
+    text("Well Played",width/2-50,height/2+50)
+    text("Press R to restart",width/2-100,height/2+75)
     ground.velocityX=0;
     player.velocityY=0
     player.changeAnimation("standing",player_standing);
@@ -131,7 +131,7 @@ function draw() {
 
 function spawnObstacles(){
   if(frameCount % 100===0){
-    obstacle1=createSprite(800,320,50,50);
+    obstacle1=createSprite(width,height-80,50,50);
     obstacle1.addImage(obstacle1Img);
     obstacle1.scale=0.1;
     //game adaptivity
