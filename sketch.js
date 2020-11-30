@@ -37,7 +37,7 @@ function setup() {
   ground.addImage(groundImage);
   ground.scale=0.3;
   
-  ground.x=400;
+  ground.x=width/2;
 
   invisibleGround=createSprite(width/2,height-20,width,20);
   invisibleGround.visible=false;
