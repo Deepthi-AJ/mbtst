@@ -38,7 +38,7 @@ function setup() {
 
   ground=createSprite(width/2,height+50,width,100);
   ground.addImage(groundImage);
-  ground.scale=0.3;
+  ground.scale=0.6;
   
   ground.x=ground.width/2;
 
