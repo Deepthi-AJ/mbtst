@@ -1,3 +1,6 @@
+//touches or space
+//ground covering the entire window width logic
+
 var backgroundImage;
 var player;
 var player_running;
